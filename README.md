@@ -18,9 +18,15 @@ pip install -r requirements.txt
 
 ## finetune
 ```bash
-# Full capabilities
+# please customize the --batch_size, --eval_batch_size, CUDA_VISIBLE_DEVICES, --num_train_epochs
 ./fintune_llava_7b.sh
 ./fintune_llava_34b.sh
 ./finetune_internvl_chat.sh
-./
+./finetune_minicpm.sh
+./finetune_qwen_vl.sh
+```
+## generation
+```bash
+# 先不要运行，等我更新
+./export.sh
 ```
