@@ -1,7 +1,8 @@
 # WeatherVision
 
 ## download image dataset:
-https://drive.google.com/drive/folders/1qMKLOsqc9aPyqrbA5chCkGHJ9T5o-yY7?usp=sharing
+https://drive.google.com/drive/folders/1VVcTpdM_XTLRFAWk3z5sU2W67Wr5tu-Z?usp=share_link
+https://drive.google.com/file/d/18nRGlpZpYuUNVWsQ8v26Hvnqs-MHMcB8/view?usp=share_link
 
 ## environment setup
 ```bash
