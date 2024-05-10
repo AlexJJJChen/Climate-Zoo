@@ -27,6 +27,6 @@ pip install -r requirements.txt
 ```
 ## generation
 ```bash
-# 先不要运行，等我更新
+# --ckpt_dir 要基于 output 的 checkpoint 文件名进行修改
 ./export.sh
 ```
