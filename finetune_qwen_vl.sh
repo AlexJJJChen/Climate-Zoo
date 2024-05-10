@@ -14,4 +14,6 @@ swift sft \
 --add_output_dir_suffix False \
 --output_dir output_qwen \
 --logging_dir output_qwen \
+--num_train_epochs "2" \
+--dataset_test_ratio "0.15" \
 
