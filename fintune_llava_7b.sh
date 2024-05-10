@@ -3,8 +3,8 @@ swift sft \
 --sft_type "full" \
 --model_id_or_path "AI-ModelScope/llava-v1.6-mistral-7b" \
 --template_type "llava-mistral-instruct" \
---custom_train_dataset_path finetune dataset/train.json \
---custom_val_dataset_path finetune dataset/test.json \
+--custom_train_dataset_path finetune_dataset/train.json \
+--custom_val_dataset_path finetune_dataset/test.json \
 --save_steps "20" \
 --lora_target_modules c_attn \
 --batch_size "8" \
