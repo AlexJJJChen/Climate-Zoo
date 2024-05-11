@@ -1,4 +1,5 @@
-CUDA_VISIBLE_DEVICES=0,1,2,3  
+CUDA_VISIBLE_DEVICES=0,1,2,3 \
+NPROC_PER_NODE=4 \
 swift sft \
 --sft_type "full" \
 --model_id_or_path "qwen/Qwen-VL-Chat" \
