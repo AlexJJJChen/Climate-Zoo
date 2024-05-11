@@ -9,7 +9,6 @@ swift sft \
 --batch_size "8" \
 --learning_rate "1e-04" \
 --eval_batch_size "8" \
---add_output_dir_suffix False \
 --output_dir output_llava_7b \
 --logging_dir output_llava_7b \
 --num_train_epochs "2" \
