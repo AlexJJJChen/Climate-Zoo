@@ -6,8 +6,8 @@ https://drive.google.com/file/d/18nRGlpZpYuUNVWsQ8v26Hvnqs-MHMcB8/view?usp=share
 
 ## environment setup
 ```bash
-conda create -n weathervision python==3.10
-conda activate weathervision
+conda create -n climatezoo python==3.10
+conda activate climatezoo
 ```
 
 ## installation
