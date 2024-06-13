@@ -13,9 +13,9 @@ ClimateIQA comprises 8,760 high-resolution wind gust heatmap images and 254,040 
 
 ## Deployments
 ### Download image dataset:
-#### QA Pairs 
+#### QA Pairs: 
 https://drive.google.com/drive/folders/1VVcTpdM_XTLRFAWk3z5sU2W67Wr5tu-Z?usp=share_link  
-#### Image 
+#### Image: 
 https://drive.google.com/file/d/18nRGlpZpYuUNVWsQ8v26Hvnqs-MHMcB8/view?usp=share_link
 
 ### Environment setup
