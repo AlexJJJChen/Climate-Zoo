@@ -33,15 +33,15 @@ pip install -r requirements.txt
 
 ### Finetune
 ```bash
+# .sh files are saved in 'finetune' document.
 # please customize the --batch_size, --eval_batch_size, CUDA_VISIBLE_DEVICES, --num_train_epochs
-./fintune_llava_7b.sh
-./fintune_llava_34b.sh
-./finetune_internvl_chat.sh
-./finetune_minicpm.sh
-./finetune_qwen_vl.sh
+./fintune_full.sh
+./fintune_lora.sh
 ```
 ### Infer
 ```bash
-# --ckpt_dir 要基于 output 的 checkpoint 文件名进行修改
-./export.sh
+# .sh files are saved in 'infer' document.
+# --ckpt_dir should be modified based on the checkpoint filename of the finetune output.
+./infer_base.sh
+./infer_finetune.sh
 ```
