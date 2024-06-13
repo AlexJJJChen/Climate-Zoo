@@ -1,0 +1,158 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "ClimateIQA",
+  "description": "ClimateIQA comprises 8,760 high-resolution wind gust heatmap images and 254,040 question-answer pair samples. The dataset was created to address the crucial need for effective Extreme Weather Events Detection (EWED), an increasingly urgent task due to the rising frequency of such events driven by global warming. Traditional methods for EWED rely on numerical threshold setting and the analysis of weather anomaly heatmaps, visualizing data such as temperature, wind speed, and precipitation. However, these methods often involve manual work and can be time-consuming and error-prone. While advances in AI have led to the development of machine learning models like Convolutional Neural Networks (CNNs) for weather prediction and EWED, these models predominantly use numeric data and often yield low accuracy. Moreover, despite the proficiency of Large Language Models (LLMs) in generating textual weather reports, they struggle with interpreting visual data\u2014crucial for EWED. General Vision-Language Models (VLMs) also face challenges in accurately interpreting meteorological heatmaps, commonly misidentifying colors, providing irrelevant responses, and giving incomplete answers. This dataset aims to fill these gaps by providing specialized meteorological data to fine-tune VLMs for more accurate and efficient EWED.\u00a0        ",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "url": "https://github.com/AlexJJJChen/Climate-Zoo",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "metadata",
+      "description": "254,040 QA pairs",
+      "contentUrl": "https://huggingface.co/datasets/GPS-Lab/ClimateIQA/blob/main/QA.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "main"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "pass0",
+      "description": "8760 wind gust heatmap images",
+      "contentUrl": "image.tar",
+      "encodingFormat": "application/x-tar",
+      "sha256": "main"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "image-files",
+      "name": "image-files",
+      "description": "JSONL files are hosted on the GitHub repository.",
+      "containedIn": {
+        "@id": "pass0"
+      },
+      "encodingFormat": "image/jpeg",
+      "includes": "*.png"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "images",
+      "name": "images",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "images/content",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "image-files"
+            },
+            "extract": {
+              "column": "images"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "images/hash",
+          "description": "image",
+          "dataType": "sc:Text",
+          "references": {
+            "fileObject": {
+              "@id": "metadata"
+            },
+            "extract": {
+              "column": "images"
+            }
+          },
+          "source": {
+            "fileSet": {
+              "@id": "image-files"
+            },
+            "extract": {
+              "column": "images"
+            },
+            "transform": {
+              "regex": "([^\\/]*)\\.png"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "images/query",
+          "name": "query",
+          "description": "query",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "metadata"
+            },
+            "extract": {
+              "column": "query"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "images/response",
+          "name": "response",
+          "description": "The expected completion of the promt.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "metadata"
+            },
+            "extract": {
+              "column": "response"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
