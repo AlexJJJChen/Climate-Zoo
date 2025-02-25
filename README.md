@@ -1,11 +1,11 @@
 # Climate-Zoo & ClimateIQA
 ## Introduction
-![image](https://github.com/AlexJJJChen/Climate-Zoo/blob/main/intro_img/nips-case-study.pdf)
+![image](https://github.com/AlexJJJChen/Climate-Zoo/blob/main/intro_img/Screen%20Shot%202025-02-25%20at%2018.44.54.png)
 Meteorological heatmaps play a vital role in deciphering extreme weather phenomena, yet their inherent complexities—marked by irregular contours, unstructured patterns, and complex color variations—present unique analytical hurdles for state-of-the-art Vision-Language Models (VLMs).
 Current state-of-the-art models like GPT-4o, Qwen-VL, and LLaVA 1.6 struggle with tasks such as precise color identification and spatial localization, resulting in inaccurate or incomplete interpretations. To address these challenges, we introduce Sparse Position and Outline Tracking (SPOT), a novel algorithm specifically designed to process irregularly shaped colored regions in visual data. SPOT identifies and localizes these regions by extracting their spatial coordinates, enabling structured representations of irregular shapes. Building on SPOT, we construct ClimateIQA, a novel meteorological visual question answering (VQA) dataset, comprising 26,280 high-resolution heatmaps and 762,120 instruction samples for wind gust, total precipitation, wind chill index and heat index analysis. ClimateIQA enhances VLM training by incorporating spatial cues, geographic metadata, and reanalysis data, improving model accuracy in interpreting and describing extreme weather features. Furthermore, we develop Climate-Zoo, a suite of fine-tuned VLMs based on SPOT-empowered \model, which significantly outperforms existing models in meteorological heatmap tasks.
 
 ## Dataset Statistics
-![image](https://github.com/AlexJJJChen/Climate-Zoo/blob/main/intro_img/nips-chart_page-0001.jpg)
+![image](https://github.com/AlexJJJChen/Climate-Zoo/blob/main/intro_img/Screen%20Shot%202025-02-25%20at%2018.46.08.png)
 ClimateIQA comprises 26,280 high-resolution wind gust heatmap images and 762,120 question-answer pair samples, categorized into four types of questions: enumeration, verification, geo-indexing, and description. 
 
 ## Benchmarks
