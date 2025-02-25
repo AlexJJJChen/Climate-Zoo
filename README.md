@@ -10,7 +10,7 @@ ClimateIQA comprises 26,280 high-resolution wind gust heatmap images and 762,120
 
 ## Benchmarks
 
-![image](https://github.com/AlexJJJChen/Climate-Zoo/blob/main/intro_img/benchmarks.png)
+![image](https://github.com/AlexJJJChen/Climate-Zoo/blob/main/intro_img/Screen%20Shot%202025-02-25%20at%2018.49.04.png)
 
 ## Deployments
 ### Download image dataset:
