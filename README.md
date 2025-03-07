@@ -17,7 +17,9 @@ ClimateIQA comprises 26,280 high-resolution wind gust heatmap images and 762,120
 #### QA Pairs: 
 https://drive.google.com/drive/folders/1VVcTpdM_XTLRFAWk3z5sU2W67Wr5tu-Z?usp=share_link  
 #### Image: 
-https://drive.google.com/file/d/18nRGlpZpYuUNVWsQ8v26Hvnqs-MHMcB8/view?usp=share_link
+Wind Gust: https://drive.google.com/file/d/18nRGlpZpYuUNVWsQ8v26Hvnqs-MHMcB8/view?usp=share_link
+Combined Wind Chill Index and Heat Index: https://drive.google.com/file/d/1CTAtvAMXoTIq_v3Rvu9a3as5b2XITN0u/view?usp=share_link
+Total Precipitation: https://drive.google.com/file/d/1Kc0ZkP1cjsKo7GrQvG0zTsFGuM8DcK_7/view?usp=share_link
 
 ### Environment setup
 ```bash
